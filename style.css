@@ -1,0 +1,226 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    /* change this */
+    font: inherit;}
+
+body {
+    background-color:blanchedalmond
+}
+/* component styling */
+
+.component-container {
+    position: fixed;
+    top: 50px;
+    left: 100px;
+    /* Change this */
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0px solid rgb(26, 24, 24);
+    background-color: rgba(255,235,205, 0.3);
+    border-radius: 5px;
+    height: 27px;
+}
+.component {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 295px;
+    height: 25px;
+    margin: 0px;
+    background-color: rgba(250,235,215, 0.3);
+    color: rgb(128, 120, 120);
+    text-align: center;
+    content: 'main';
+    border: 0px solid black;
+
+    /*box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .3);*/
+}
+
+.text {
+    border-radius: 5px;
+    border: 1px solid rgb(99, 97, 97);
+    margin: 0px;
+    height: 25px;
+    width: 215px;
+    padding-left: 8px;
+    background-color:rgb(234, 232, 228)
+    /*transition: width .5s;*/
+}
+
+.button {
+    margin-right: 0px;
+    margin-left: 1px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 30px;
+    height: 25px;
+    background-color: rgba(193,196,195,0.1);
+    cursor: pointer;
+}
+
+
+.button:active {
+    color: white;
+    /*transform: scale(-1,-10);*/
+}
+.expand {
+    visibility: visible;
+    position: relative;
+    left: -72px;
+    top: 5px;
+    width:22px;
+
+    height: 21px;
+    padding-left: 1px;
+    padding-bottom: 10px;
+    margin-bottom:8px;
+    border: 0px solid gray;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color:rgb(12, 12, 12);
+    background-color: rgba(193, 196, 195, 0.1);
+}
+
+.clear {
+    visibility: hidden;
+    position: relative;
+    left: -101px;
+    top: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(86, 77, 77);
+}
+
+.clear:hover {
+    color: rgb(76, 9, 9);
+}
+.clear:active {
+    color: rgb(248, 247, 247);
+
+}
+
+.save {
+    height: 100%;
+    width: 18px;
+    border: 0px solid black;
+}
+
+input[type="checkbox"] {
+    margin-left: 15px;
+    margin-top: 4px;
+    opacity: 5;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    accent-color: rgb(27, 53, 92);
+}
+
+.menu-container {
+    margin: 0px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    position: relative;
+    overflow: auto;
+
+    top: 1px;
+    left: -15x;
+    z-index: 1;
+    width: 215px;
+    height: 133px; /* max height 125px*/
+    background-color: rgb(234, 232, 228);
+    border: 1px solid rgb(171, 165, 165);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .9);
+}
+
+.item-container {
+    display: flex;
+    justify-content:space-between;
+}
+.item {
+    border-bottom: 0px solid black;
+    padding-left: 5px;
+    margin-bottom: 3px;
+    height: 23px;
+    width: 215px;
+    cursor: pointer;
+    overflow: hidden;
+    border-bottom: 0px solid gray;
+    background-color: rgba(35, 31, 22, .1);
+}
+
+.item:nth-child(even) {
+    background-color: rgba(8, 8, 8, 0.9);
+}
+
+.close {
+    margin-right: 3px;
+    /* keep the icon over the item name incase its longer than the menu */
+    z-index: 1;
+    font-size: 22px;
+    font-weight: bolder;
+    color: rgb(48, 47, 47);
+    cursor: default;
+    background-color: rgba(35, 31, 22, .1);
+    height: 23px;
+    line-height: 25px;
+}
+
+

@@ -228,9 +228,9 @@ input[type="checkbox"] {
 
 .switch {
     margin-left: 8px;
-    margin-top: 4px;
+    margin-top: -1px;
     display: inline-block;
-    height: 20px;
+    height: 27px;
     position: relative;
     width: 47px;
 }
@@ -252,13 +252,13 @@ input[type="checkbox"] {
 
 .slider:before {
     background-color: #fff;
-    bottom: 3px;
+    bottom: 4px;
     content: "";
-    height: 14px;
+    height: 19px;
     left: 4px;
     position: absolute;
     transition: .4s;
-    width: 14px;
+    width: 19px;
 }
 
 input:checked+.slider {
@@ -266,7 +266,7 @@ input:checked+.slider {
 }
 
 input:checked+.slider:before {
-    transform: translateX(26px);
+    transform: translateX(21px);
 }
 
 .slider.round {

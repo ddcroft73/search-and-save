@@ -44,8 +44,7 @@ class SearchAndSave {
               //  this.showClearButton(true);
             } else if (this.textBox.value.length <= 1) {
               //  this.showClearButton(false);
-            }
-            
+            }            
             console.log(e);
             if (e.key === "ArrowDown") {
                 this.viewMenu(true);

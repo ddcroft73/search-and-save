@@ -19,7 +19,7 @@ class SearchAndSave {
 // cjange the name from save        
         this.saveCheck = document.querySelector("#checkbox");
         this.component = document.querySelector(".component");
-        this.clearButton = document.querySelector("#clear");
+        this.clearButton = document.querySelector("#delete");
 
         this.textBox.addEventListener("click", () => {
             this.viewMenu(false);
@@ -41,9 +41,20 @@ class SearchAndSave {
         // show the clear button when needed
         this.textBox.addEventListener("keydown", (e) => {
             if (this.textBox.value.length >= 3) {
-                this.showClearButton(true);
+              //  this.showClearButton(true);
             } else if (this.textBox.value.length <= 1) {
-                this.showClearButton(false);
+              //  this.showClearButton(false);
+            }
+            
+            console.log(e);
+            if (e.key === "ArrowDown") {
+                this.viewMenu(true);
+            }
+            if (e.key === "Enter") {
+                if (this.textBox.value !== "") {
+                    const click = new Event("click");
+                    this.searchButton.dispatchEvent(click);
+                }
             }
         });
 
@@ -73,7 +84,7 @@ class SearchAndSave {
 
         this.clearButton.addEventListener("click", () => {
             this.textBox.value = "";
-            this.showClearButton(false);
+           // this.showClearButton(false);
         });
 
         // hide menu when clicked outside component
@@ -268,6 +279,7 @@ class SearchAndSave {
             console.log(menuItems[i].text);
             this.addToMenu(menuItems[i], menuItems[i].itemID);
         }
+        this.textBox.focus();
     };
 
     // add the item as on object with the ID to find it by, if the location name

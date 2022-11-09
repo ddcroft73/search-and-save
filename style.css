@@ -60,52 +60,74 @@ body {
 
 .component-container {
     position: fixed;
-    top: 50px;
-    left: 100px;
+    left: 50px;
+    top: 100px;
+    display: flex;
+    width: 290px;
     /* Change this */
     font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 0px solid rgb(26, 24, 24);
-    background-color: rgba(255,235,205, 0.3);
-    border-radius: 5px;
-    height: 27px;
+    border: 1px solid rgb(13, 13, 13);
+    background-color: rgba(168, 168, 162, 0.4);
+    border-radius: 15px;
+    height: 30px;
+    padding: 2px;
 }
 .component {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 295px;
+    width: 180px;
     height: 25px;
     margin: 0px;
     background-color: rgba(250,235,215, 0.3);
     color: rgb(128, 120, 120);
-    text-align: center;
-    content: 'main';
-    border: 0px solid black;
-
+    
+    border: 1px solid rgb(224, 202, 202);
     /*box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, .3);*/
 }
 
+.search {
+    min-width: 25px;
+    border: 0px solid black;
+    margin-right: 7px;
+}
+
+.delete {
+    border: 0px solid black;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#delete {
+    border: 0px solid black;
+        width: 25px;
+        height: 24px;
+        background-color: rgba(193, 196, 195, 0.1);
+        cursor: pointer;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+    
+
+}
+
 .text {
-    border-radius: 5px;
     border: 1px solid rgb(99, 97, 97);
-    margin: 0px;
-    height: 25px;
-    width: 215px;
-    padding-left: 8px;
-    background-color:rgb(234, 232, 228)
+    margin-top: 0px;
+    height: 22px;
+    width: 180px;
+    padding-left: 4px;
+    background-color:rgb(234, 232, 228);
+    border-radius: 3px;
     /*transition: width .5s;*/
 }
 
-.button {
-    margin-right: 0px;
-    margin-left: 1px;
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 30px;
-    height: 25px;
+#submit {
+    border: 0px solid black;
+    width: 33px;
+    height: 24px;
     background-color: rgba(193,196,195,0.1);
     cursor: pointer;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 
@@ -116,19 +138,20 @@ body {
 .expand {
     visibility: visible;
     position: relative;
-    left: -72px;
-    top: 5px;
+    left: -22px;
+    top: 0px;
     width:22px;
 
-    height: 21px;
-    padding-left: 1px;
+    height: 22px;
+    padding-left: 6px;
+    padding-right: 6px;
     padding-bottom: 10px;
     margin-bottom:8px;
-    border: 0px solid gray;
+    border: 1px solid gray;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     color:rgb(12, 12, 12);
-    background-color: rgba(193, 196, 195, 0.1);
+    background-color: rgb(234, 232, 228);
 }
 
 .clear {
@@ -157,8 +180,8 @@ body {
 }
 
 input[type="checkbox"] {
-    margin-left: 15px;
-    margin-top: 4px;
+    margin-left: 0px;
+    margin-top: 0px;
     opacity: 5;
     height: 18px;
     width: 18px;
@@ -177,8 +200,8 @@ input[type="checkbox"] {
     position: relative;
     overflow: auto;
 
-    top: 1px;
-    left: -15x;
+    top: 23px;
+    left: -221px;
     z-index: 1;
     width: 215px;
     height: 133px; /* max height 125px*/
@@ -227,12 +250,14 @@ input[type="checkbox"] {
 /* checkbox styling */
 
 .switch {
-    margin-left: 8px;
+    margin-left: 1px;
     margin-top: -1px;
     display: inline-block;
-    height: 27px;
+    height: 25px;
     position: relative;
-    width: 47px;
+    width: 45px;
+    border: 0px solid black;
+    border-radius: 15px;
 }
 
 .switch input {
@@ -240,7 +265,7 @@ input[type="checkbox"] {
 }
 
 .slider {
-    background-color: rgba(187, 175, 146, 0.5);
+    background-color: rgba(187, 175, 146, 075);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -254,19 +279,19 @@ input[type="checkbox"] {
     background-color: #fff;
     bottom: 4px;
     content: "";
-    height: 19px;
+    height: 17px;
     left: 4px;
     position: absolute;
     transition: .4s;
-    width: 19px;
+    width: 17px;
 }
 
 input:checked+.slider {
-    background-color: #415ea6;
+    background-color: #1f3771;
 }
 
 input:checked+.slider:before {
-    transform: translateX(21px);
+    transform: translateX(19px);
 }
 
 .slider.round {

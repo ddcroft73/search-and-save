@@ -13,25 +13,20 @@
 
     
     <div class="component-container">
+        <div class="search"><button class="button" id="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button></div>
+        
         <div class="component">
             <input class="text" id="text">
-            <button class="button" id="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
-            <div class="save">
-
-                <label class="switch" for="checkbox">
-                    <input type="checkbox" id="checkbox">
-                    <div class="slider round"></div>
-                </label>
-
-            </div>
             <div class="expand" id="expand">
                 <i class="fa-sharp fa-solid fa-caret-down"></i>
-            </div>  
-
-            <div class="clear" id="clear">
-                X
-            </div>
-            
+            </div>              
+        </div>
+        <div class="delete"><button class="button" id="delete">&#x2716;</button></div>
+        <div class="save">
+            <label class="switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="slider round"></div>
+            </label>
         </div>
         <div class="menu-container">
             <div class="menu" id="menu"></div>
@@ -39,7 +34,6 @@
     </div>
 
 
-<div class="component-container"></div>
     <script src="widget.js"></script>
     </body>
 </html>
